@@ -287,6 +287,106 @@
   </div>
 </section>
 
+  <section id="testimonios">
+  <div class="reveal">
+    <div class="section-tag">Resultados reales</div>
+    <h2 class="section-title">TESTIMONIOS<br/><span>DE CLIENTES</span></h2>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="testimonios-grid">
+    <div class="testimonio-card reveal">
+      <p class="testimonio-text">“Gracias a CDFD mejoré mi condición física en pocos meses, el plan fue completamente personalizado y siempre estuvieron pendientes de mi progreso.”</p>
+      <div class="testimonio-user">María Gutiérrez</div>
+      <div class="testimonio-age">24 años</div>
+    </div>
+
+    <div class="testimonio-card reveal">
+      <p class="testimonio-text">“Nunca había entrenado con tanta estructura. Los resultados fueron visibles en semanas.”</p>
+      <div class="testimonio-user">Carlos Ramírez</div>
+      <div class="testimonio-age">29 años</div>
+    </div>
+
+    <div class="testimonio-card reveal">
+      <p class="testimonio-text">“El acompañamiento profesional hace toda la diferencia. Me siento más fuerte y con mejor energía.”</p>
+      <div class="testimonio-user">Fernanda López</div>
+      <div class="testimonio-age">31 años</div>
+    </div>
+
+    <div class="testimonio-card reveal">
+      <p class="testimonio-text">“Recuperé movilidad y mejoré mi salud general. Totalmente recomendado.”</p>
+      <div class="testimonio-user">José Martínez</div>
+      <div class="testimonio-age">38 años</div>
+    </div>
+
+    <div class="testimonio-card reveal">
+      <p class="testimonio-text">“Los entrenadores realmente saben lo que hacen. Cada sesión tiene propósito.”</p>
+      <div class="testimonio-user">Andrea Torres</div>
+      <div class="testimonio-age">26 años</div>
+    </div>
+
+    <div class="testimonio-card reveal">
+      <p class="testimonio-text">“Pasé de no hacer ejercicio a tener una rutina sólida y resultados constantes.”</p>
+      <div class="testimonio-user">Luis Herrera</div>
+      <div class="testimonio-age">34 años</div>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="reveal">
+    <div class="section-tag">Información clave</div>
+    <h2 class="section-title">BLOG &<br/><span>EDUCACIÓN</span></h2>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="blog-grid">
+    <div class="blog-card reveal">
+      <h3>Importancia de la actividad física</h3>
+      <p>La actividad física es clave para prevenir enfermedades, mejorar el sistema cardiovascular y fortalecer la salud mental. Mantenerse activo reduce riesgos y mejora la calidad de vida.</p>
+    </div>
+
+    <div class="blog-card reveal">
+      <h3>Evaluaciones físicas</h3>
+      <p>Las evaluaciones permiten conocer tu estado actual y diseñar un plan adecuado. Son fundamentales para medir progreso y evitar lesiones.</p>
+    </div>
+
+    <div class="blog-card reveal">
+      <h3>Hábitos saludables</h3>
+      <p>Una rutina efectiva incluye descanso, buena alimentación, hidratación y consistencia en el entrenamiento.</p>
+    </div>
+
+    <div class="blog-card reveal">
+      <h3>Acompañamiento profesional</h3>
+      <p>Contar con expertos garantiza técnica correcta, mejores resultados y un proceso seguro y eficiente.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <h3 class="section-title" style="font-size:32px;margin-top:60px;">PREGUNTAS FRECUENTES</h3>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">¿Cuánto tiempo tarda ver resultados?</div>
+      <div class="faq-answer">Depende del objetivo, pero en 4 a 8 semanas se notan cambios visibles.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">¿Necesito experiencia previa?</div>
+      <div class="faq-answer">No. Los programas están diseñados para todos los niveles.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">¿Qué incluye la evaluación física?</div>
+      <div class="faq-answer">Incluye análisis corporal, movilidad, fuerza y condición cardiovascular.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">¿Cuántos días debo entrenar?</div>
+      <div class="faq-answer">Depende del plan, pero generalmente entre 3 y 5 días por semana.</div>
+    </div>
+  </div>
+</section>
+  
 <section id="contacto">
   <div class="reveal">
     <div class="section-tag">Hablemos</div>
@@ -652,5 +752,12 @@ function handleSubmit(e){
   setTimeout(()=>{ document.getElementById('form-success').style.display='block'; btn.textContent='✓ Enviado'; e.target.reset(); },1200);
 }
 </script>
+
+<script>
+function toggleFAQ(el){
+  const answer = el.nextElementSibling;
+  answer.style.display = answer.style.display === "block" ? "none" : "block";
+}
+</script>  
 </body>
 </html>
