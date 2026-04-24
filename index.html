@@ -106,6 +106,61 @@
     .politica-card h4{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;}
     .politica-card p{font-size:13px;font-weight:300;color:var(--gray);line-height:1.7;}
 
+    /* ══════════════════════════════════════
+       TESTIMONIALES
+    ══════════════════════════════════════ */
+    #testimoniales{background:var(--dark);position:relative;overflow:hidden;}
+    #testimoniales::before{content:'CLIENTES';position:absolute;left:-20px;top:50%;transform:translateY(-50%);font-family:'Bebas Neue',sans-serif;font-size:180px;color:rgba(255,255,255,.018);letter-spacing:10px;white-space:nowrap;pointer-events:none;}
+    .testimoniales-header{text-align:center;margin-bottom:60px;}
+    .testimoniales-header .section-sub{margin:0 auto;}
+    .testimoniales-track-wrapper{overflow:hidden;position:relative;}
+    .testimoniales-track-wrapper::before,.testimoniales-track-wrapper::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;}
+    .testimoniales-track-wrapper::before{left:0;background:linear-gradient(to right,var(--dark),transparent);}
+    .testimoniales-track-wrapper::after{right:0;background:linear-gradient(to left,var(--dark),transparent);}
+    .testimoniales-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:24px;}
+    .testimonial-card{background:var(--navy2);border:1px solid var(--border);padding:36px 32px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,background .3s;}
+    .testimonial-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),var(--blue-light));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+    .testimonial-card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.14);background:rgba(17,34,64,.9);}
+    .testimonial-card:hover::before{transform:scaleX(1);}
+    .testimonial-quote-icon{font-family:'Bebas Neue',sans-serif;font-size:80px;line-height:.7;color:rgba(230,81,0,.12);position:absolute;top:16px;right:20px;letter-spacing:-2px;}
+    .testimonial-stars{display:flex;gap:4px;margin-bottom:16px;}
+    .testimonial-stars span{color:var(--orange-light);font-size:14px;}
+    .testimonial-text{font-size:14px;font-weight:300;color:var(--gray);line-height:1.8;font-style:italic;margin-bottom:28px;position:relative;z-index:1;}
+    .testimonial-author{display:flex;align-items:center;gap:16px;border-top:1px solid var(--border);padding-top:20px;}
+    .testimonial-avatar{width:46px;height:46px;flex-shrink:0;background:linear-gradient(135deg,var(--blue),var(--orange));clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;color:#fff;letter-spacing:1px;}
+    .testimonial-name{font-size:15px;font-weight:700;color:#fff;}
+    .testimonial-meta{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange-light);}
+    .testimoniales-bottom-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+
+    /* ══════════════════════════════════════
+       BLOG
+    ══════════════════════════════════════ */
+    #blog{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);position:relative;overflow:hidden;}
+    #blog::before{content:'BLOG';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'Bebas Neue',sans-serif;font-size:220px;color:rgba(255,255,255,.018);letter-spacing:10px;white-space:nowrap;pointer-events:none;}
+    .blog-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:24px;}
+    /* Tabs */
+    .blog-tabs{display:flex;gap:0;flex-wrap:wrap;margin-bottom:48px;border-bottom:1px solid var(--border);}
+    .blog-tab{padding:14px 28px;background:transparent;border:none;color:var(--gray);font-family:'Barlow',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;position:relative;transition:color .25s;border-bottom:3px solid transparent;margin-bottom:-1px;}
+    .blog-tab:hover{color:var(--white);}
+    .blog-tab.active{color:var(--orange-light);border-bottom-color:var(--orange-light);}
+    /* Blog articles */
+    .blog-article{display:none;animation:fadeInUp .45s ease;}
+    .blog-article.active{display:block;}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    .blog-article-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start;}
+    .blog-visual{background:linear-gradient(135deg,var(--blue) 0%,var(--navy) 100%);aspect-ratio:4/3;clip-path:polygon(0 0,92% 0,100% 8%,100% 100%,8% 100%,0 92%);display:flex;align-items:center;justify-content:center;font-size:80px;position:relative;overflow:hidden;}
+    .blog-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(230,81,0,.15),rgba(21,101,192,.12));}
+    .blog-content-num{font-family:'Bebas Neue',sans-serif;font-size:100px;line-height:1;color:rgba(255,255,255,.04);margin-bottom:-32px;letter-spacing:3px;}
+    .blog-content-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(230,81,0,.12);border:1px solid rgba(230,81,0,.3);padding:5px 14px;margin-bottom:16px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange-light);}
+    .blog-content h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,44px);letter-spacing:2px;line-height:1.05;color:#fff;margin-bottom:20px;}
+    .blog-content p{font-size:14px;font-weight:300;color:var(--gray);line-height:1.85;margin-bottom:16px;}
+    .blog-content p:last-of-type{margin-bottom:0;}
+    .blog-highlights{margin-top:24px;display:flex;flex-direction:column;gap:12px;}
+    .blog-highlight{display:flex;gap:14px;align-items:flex-start;padding:16px 20px;background:rgba(255,255,255,.03);border-left:3px solid var(--orange);border:1px solid var(--border);border-left:3px solid var(--orange);}
+    .blog-highlight-icon{font-size:18px;flex-shrink:0;margin-top:2px;}
+    .blog-highlight h5{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;}
+    .blog-highlight p{font-size:13px;color:var(--gray);line-height:1.6;margin:0;}
+
     #contacto{background:var(--dark);}
     .contacto-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;margin-top:60px;align-items:start;}
     .contacto-info{display:flex;flex-direction:column;gap:32px;}
@@ -156,6 +211,14 @@
       .footer-grid{grid-template-columns:1fr;gap:32px;}
       .hero-stats{display:none;}
       .form-row{grid-template-columns:1fr;}
+      .testimoniales-grid,.testimoniales-bottom-row{grid-template-columns:1fr;}
+      .blog-article-inner{grid-template-columns:1fr;}
+      .blog-visual{display:none;}
+      .blog-tabs{gap:0;}
+      .blog-tab{padding:12px 16px;font-size:10px;}
+    }
+    @media(max-width:600px){
+      .testimoniales-bottom-row{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -173,6 +236,8 @@
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#politicas">Políticas</a></li>
+    <li><a href="#testimoniales">Testimonios</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
   <a href="#contacto" class="nav-cta">Comenzar ahora</a>
@@ -183,6 +248,8 @@
   <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
   <a href="#servicios" onclick="toggleMenu()">Servicios</a>
   <a href="#politicas" onclick="toggleMenu()">Políticas</a>
+  <a href="#testimoniales" onclick="toggleMenu()">Testimonios</a>
+  <a href="#blog" onclick="toggleMenu()">Blog</a>
   <a href="#contacto" onclick="toggleMenu()">Contacto</a>
   <a href="#contacto" class="nav-cta" style="text-align:center" onclick="toggleMenu()">Comenzar ahora</a>
 </div>
@@ -287,6 +354,200 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALES
+═══════════════════════════════════════════ -->
+<section id="testimoniales">
+  <div class="testimoniales-header reveal">
+    <div class="section-tag">Lo que dicen nuestros clientes</div>
+    <h2 class="section-title">RESULTADOS QUE<br/><span>HABLAN POR SÍ SOLOS</span></h2>
+    <div class="accent-bar" style="margin:16px auto 24px;"></div>
+    <p class="section-sub">Personas reales, transformaciones reales. Conoce las experiencias de quienes ya dieron el paso.</p>
+  </div>
+
+  <div class="testimoniales-grid reveal">
+    <!-- Testimonial 1 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote-icon">"</div>
+      <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testimonial-text">"Gracias a CDFD mejoré mi condición física en pocos meses. El plan que me dieron fue completamente personalizado y siempre estuvieron pendientes de mi progreso."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">MG</div>
+        <div>
+          <div class="testimonial-name">María Gutiérrez</div>
+          <div class="testimonial-meta">24 años · Entrenamiento General</div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial 2 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote-icon">"</div>
+      <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testimonial-text">"El entrenamiento en CDFD me ayudó a mejorar notablemente mi rendimiento deportivo. Las evaluaciones físicas son muy completas y realmente se nota el profesionalismo del equipo."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">CS</div>
+        <div>
+          <div class="testimonial-name">Carlos Sánchez</div>
+          <div class="testimonial-meta">19 años · Deportista</div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial 3 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote-icon">"</div>
+      <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testimonial-text">"Nunca me había gustado hacer actividad física. Sin embargo, gracias a CDFD he sido constante. El ambiente es muy respetuoso y motivador, los entrenadores siempre te apoyan."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">AL</div>
+        <div>
+          <div class="testimonial-name">Andrea López</div>
+          <div class="testimonial-meta">32 años · Acondicionamiento</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimoniales-bottom-row reveal">
+    <!-- Testimonial 4 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote-icon">"</div>
+      <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testimonial-text">"Creímos que a nuestra edad ya no era necesario hacer ejercicio. Después de cumplir el plan de CDFD somos más activos y pudimos retomar actividades diarias que habíamos dejado."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">LB</div>
+        <div>
+          <div class="testimonial-name">Lorenzo Gómez & Beatriz Hernández</div>
+          <div class="testimonial-meta">65 y 64 años · Matrimonio</div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial 5 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote-icon">"</div>
+      <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testimonial-text">"Al principio dudé sobre los métodos de entrenamiento. Me gustó que la atención es personalizada. No es un gimnasio cualquiera, aquí realmente se preocupan por tus objetivos y tu salud."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">LM</div>
+        <div>
+          <div class="testimonial-name">Luis Mateos</div>
+          <div class="testimonial-meta">28 años · Atleta</div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial 6 -->
+    <div class="testimonial-card">
+      <div class="testimonial-quote-icon">"</div>
+      <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testimonial-text">"Con su ayuda logré adoptar un estilo de vida más saludable. No solo se enfocan en el entrenamiento, también te enseñan a cuidar tu cuerpo por medio de la buena alimentación y el ejercicio."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">FP</div>
+        <div>
+          <div class="testimonial-name">Fernanda Pérez</div>
+          <div class="testimonial-meta">40 años · Estilo de Vida</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     BLOG
+═══════════════════════════════════════════ -->
+<section id="blog">
+  <div class="blog-header">
+    <div class="reveal">
+      <div class="section-tag">Conocimiento en movimiento</div>
+      <h2 class="section-title">NUESTRO<br/><span>BLOG</span></h2>
+    </div>
+    <p class="section-sub reveal" style="max-width:360px;">Artículos desarrollados por nuestros profesionales para guiarte en tu camino hacia una vida más activa y saludable.</p>
+  </div>
+
+  <div class="blog-tabs reveal">
+    <button class="blog-tab active" onclick="showTab(0,this)">Actividad Física y Salud</button>
+    <button class="blog-tab" onclick="showTab(1,this)">Evaluaciones Físicas</button>
+    <button class="blog-tab" onclick="showTab(2,this)">Hábitos Saludables</button>
+    <button class="blog-tab" onclick="showTab(3,this)">Acompañamiento Profesional</button>
+  </div>
+
+  <!-- ARTÍCULO 1 -->
+  <div class="blog-article active" id="blog-art-0">
+    <div class="blog-article-inner">
+      <div class="blog-visual reveal">💪</div>
+      <div class="blog-content reveal">
+        <div class="blog-content-num">01</div>
+        <div class="blog-content-tag">Salud &amp; Bienestar</div>
+        <h3>IMPORTANCIA DE LA ACTIVIDAD FÍSICA EN LA SALUD</h3>
+        <p>La actividad física permite mantener un estilo de vida saludable ya que contribuye a la prevención de enfermedades e igualmente al fortalecimiento del sistema inmunológico y el sistema cardiovascular. Fortalece el corazón, mejora la circulación sanguínea y ayuda a mantener niveles saludables de presión arterial, colesterol y glucosa.</p>
+        <p>En cuanto a la salud mental, la actividad física juega un papel importante en la liberación de endorfinas que reducen el estrés, la ansiedad y la depresión, mejorando el estado de ánimo y la calidad del sueño.</p>
+        <p>Es decir, la realización de actividad física no solo se trata de mantenerse en movimiento: aumenta la calidad de vida, hace que las personas se sientan mejor, con mayor energía y bienestar en su día a día.</p>
+        <div class="blog-highlights">
+          <div class="blog-highlight"><div class="blog-highlight-icon">❤️</div><div><h5>Sistema Cardiovascular</h5><p>Fortalece el corazón, mejora la circulación y mantiene niveles saludables de presión arterial, colesterol y glucosa.</p></div></div>
+          <div class="blog-highlight"><div class="blog-highlight-icon">🧠</div><div><h5>Salud Mental</h5><p>Libera endorfinas que reducen el estrés, la ansiedad y la depresión, mejorando el estado de ánimo y la calidad del sueño.</p></div></div>
+          <div class="blog-highlight"><div class="blog-highlight-icon">🛡️</div><div><h5>Sistema Inmunológico</h5><p>Contribuye al fortalecimiento de las defensas naturales del cuerpo, ayudando a prevenir enfermedades.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTÍCULO 2 -->
+  <div class="blog-article" id="blog-art-1">
+    <div class="blog-article-inner">
+      <div class="blog-visual reveal">📊</div>
+      <div class="blog-content reveal">
+        <div class="blog-content-num">02</div>
+        <div class="blog-content-tag">Rendimiento Deportivo</div>
+        <h3>EVALUACIONES FÍSICAS: QUÉ SON Y POR QUÉ IMPORTAN</h3>
+        <p>Las evaluaciones físicas son un conjunto de pruebas que permiten medir y conocer el estado actual de una persona antes, durante y después de un programa de entrenamiento personalizado. Su objetivo principal es brindar información precisa sobre las capacidades físicas básicas como la fuerza, resistencia, velocidad, flexibilidad y la composición corporal.</p>
+        <p>A través de ellas, el entrenador es capaz de identificar fortalezas, áreas de mejora y posibles riesgos, personalizando el entrenamiento para hacerlo más efectivo y seguro para cada persona.</p>
+        <div class="blog-highlights">
+          <div class="blog-highlight"><div class="blog-highlight-icon">🎯</div><div><h5>Punto de partida real</h5><p>Permite conocer el nivel exacto en el que el cliente se encuentra para diseñar un plan adecuado a su condición.</p></div></div>
+          <div class="blog-highlight"><div class="blog-highlight-icon">📈</div><div><h5>Medición del progreso</h5><p>Se comparan los primeros resultados con los avances obtenidos para evidenciar la mejora y ajustar el programa.</p></div></div>
+          <div class="blog-highlight"><div class="blog-highlight-icon">🔬</div><div><h5>Tests principales</h5><p>Test de resistencia (Cooper o marcha), test de fuerza-potencia, evaluación de movilidad y flexibilidad, test de velocidad y agilidad.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTÍCULO 3 -->
+  <div class="blog-article" id="blog-art-2">
+    <div class="blog-article-inner">
+      <div class="blog-visual reveal">🌿</div>
+      <div class="blog-content reveal">
+        <div class="blog-content-num">03</div>
+        <div class="blog-content-tag">Estilo de Vida</div>
+        <h3>HÁBITOS SALUDABLES PARA AGREGAR A TU RUTINA</h3>
+        <p>Los hábitos saludables generan con el tiempo un impacto positivo en la salud y la calidad de vida, contribuyendo al bienestar físico, mental y emocional. Los principales incluyen una alimentación equilibrada, la práctica regular de actividad física, un buen descanso, hidratación adecuada y el manejo del estrés.</p>
+        <p>Adoptar hábitos saludables no tiene por qué ser complicado: se trata de constancia y equilibrio. Pequeños cambios en tu día a día pueden generar grandes cambios en tu salud y bienestar.</p>
+        <div class="blog-highlights">
+          <div class="blog-highlight"><div class="blog-highlight-icon">💧</div><div><h5>Hidratación adecuada</h5><p>Beber suficiente agua mejora el rendimiento físico, la concentración y el funcionamiento general del organismo.</p></div></div>
+          <div class="blog-highlight"><div class="blog-highlight-icon">🥗</div><div><h5>Alimentación equilibrada</h5><p>Contribuye a mantener un peso saludable y prevenir enfermedades. Priorizar alimentos naturales es la clave.</p></div></div>
+          <div class="blog-highlight"><div class="blog-highlight-icon">😴</div><div><h5>Descanso de calidad</h5><p>Dormir entre 7 u 8 horas permite que el cuerpo se recupere, mejora el rendimiento y fortalece el sistema inmunológico.</p></div></div>
+          <div class="blog-highlight"><div class="blog-highlight-icon">🧘</div><div><h5>Gestión del estrés</h5><p>Respirar profundamente, caminar, entrenar o desconectarte por momentos son estrategias efectivas para el equilibrio mental.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTÍCULO 4 -->
+  <div class="blog-article" id="blog-art-3">
+    <div class="blog-article-inner">
+      <div class="blog-visual reveal">🏆</div>
+      <div class="blog-content reveal">
+        <div class="blog-content-num">04</div>
+        <div class="blog-content-tag">Entrenamiento Profesional</div>
+        <h3>IMPORTANCIA DEL ACOMPAÑAMIENTO PROFESIONAL</h3>
+        <p>Muy comúnmente se cree que entrenar por cuenta propia es sencillo y que la amplia información en internet es suficiente. Sin embargo, el entrenamiento sin guía adecuada puede ser riesgoso: la falta de conocimiento puede afectar tanto los resultados como la salud. Trabajar con técnica incorrecta aumenta la probabilidad de lesiones musculares, articulares y de ligamentos.</p>
+        <p>Contar con el acompañamiento de un profesional marca una gran diferencia en los resultados, la seguridad y la constancia. Un entrenador calificado no solo indica qué hacer, sino que diseña un plan basado en tus objetivos, tu nivel físico y necesidades específicas, haciendo que cada sesión tenga un propósito claro y sea realmente efectiva.</p>
+        <div class="blog-highlights">
+          <div class="blog-highlight"><div class="blog-highlight-icon">🛡️</div><div><h5>Prevención de lesiones</h5><p>La técnica correcta evita lesiones graves. Pequeños errores repetidos pueden generar problemas a largo plazo.</p></div></div>
+          <div class="blog-highlight"><div class="blog-highlight-icon">📋</div><div><h5>Planificación correcta</h5><p>Evita el sobreentrenamiento, la falta de descanso y la ausencia de progresión adecuada que generan fatiga y estancamiento.</p></div></div>
+          <div class="blog-highlight"><div class="blog-highlight-icon">🔥</div><div><h5>Motivación y constancia</h5><p>Tener a alguien que te guíe es un factor clave de disciplina, reduciendo el abandono y manteniendo la constancia.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contacto">
   <div class="reveal">
     <div class="section-tag">Hablemos</div>
@@ -300,25 +561,17 @@
       <div class="contacto-item"><div class="contacto-icon-box">📱</div><div><h4>Instagram</h4><p>@Centro De Desarrollo Fisico y Deportivo</p></div></div>
       <div>
         <p style="font-size:13px;color:var(--gray);margin-bottom:16px;letter-spacing:1px;text-transform:uppercase;font-weight:700;">Síguenos en redes</p>
-       <div class="social-links">
-  <a href="https://www.instagram.com/p/DXYNrNfjAu8/?igsh=OGdkZzBuaTY1aTdw" target="_blank" class="social-link" title="Instagram">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2.2a2.8 2.8 0 110 5.6 2.8 2.8 0 010-5.6zm4.5-2.7a1 1 0 100 2 1 1 0 000-2z"/>
-    </svg>
-  </a>
-
-  <a href="https://www.facebook.com/share/18PCqGdwmQ/" target="_blank" class="social-link" title="Facebook">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 12a10 10 0 10-11.6 9.9v-7h-2.5v-2.9h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5v1.9h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/>
-    </svg>
-  </a>
-
-  <a href="https://wa.me/529983196749" target="_blank" class="social-link" title="WhatsApp">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.9-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.3-5.7c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.4.1-.1.2-.5.7-.6.8-.1.1-.2.1-.4 0-.2-.1-.8-.3-1.6-1-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1 0-.3 0-.4 0-.1-.4-1-.5-1.3-.1-.3-.3-.2-.4-.2h-.3c-.1 0-.3 0-.4.2-.1.2-.6.6-.6 1.5s.6 1.7.7 1.8c.1.1 1.2 1.9 3 2.6.4.2.8.3 1.1.4.5.2.9.2 1.3.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.2-1 0-.1-.2-.2-.3-.2z"/>
-    </svg>
-  </a>
-</div>
+        <div class="social-links">
+          <a href="https://www.instagram.com/p/DXYNrNfjAu8/?igsh=OGdkZzBuaTY1aTdw" target="_blank" class="social-link" title="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2.2a2.8 2.8 0 110 5.6 2.8 2.8 0 010-5.6zm4.5-2.7a1 1 0 100 2 1 1 0 000-2z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/18PCqGdwmQ/" target="_blank" class="social-link" title="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9v-7h-2.5v-2.9h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5v1.9h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
+          </a>
+          <a href="https://wa.me/529983196749" target="_blank" class="social-link" title="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.9-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.3-5.7c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.4.1-.1.2-.5.7-.6.8-.1.1-.2.1-.4 0-.2-.1-.8-.3-1.6-1-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1 0-.3 0-.4 0-.1-.4-1-.5-1.3-.1-.3-.3-.2-.4-.2h-.3c-.1 0-.3 0-.4.2-.1.2-.6.6-.6 1.5s.6 1.7.7 1.8c.1.1 1.2 1.9 3 2.6.4.2.8.3 1.1.4.5.2.9.2 1.3.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.2-1 0-.1-.2-.2-.3-.2z"/></svg>
+          </a>
+        </div>
       </div>
       <div style="padding:32px;background:linear-gradient(135deg,var(--orange) 0%,var(--orange-light) 100%);margin-top:8px;">
         <p style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;margin-bottom:8px;">¿LISTO PARA COMENZAR?</p>
@@ -384,8 +637,8 @@
       </div>
       <p>Transformamos el potencial físico de nuestros clientes a través de un sistema de entrenamiento personalizado, basado en la ciencia del movimiento y el desarrollo progresivo de la fuerza.</p>
       <div class="social-links">
-        <a href="#" class="social-link">📸</a>
-        <a href="#" class="social-link">👥</a>
+        <a href="https://www.instagram.com/p/DXYNrNfjAu8/?igsh=OGdkZzBuaTY1aTdw" target="_blank" class="social-link">📸</a>
+        <a href="https://www.facebook.com/share/18PCqGdwmQ/" target="_blank" class="social-link">👥</a>
         <a href="https://wa.me/529983196749" class="social-link">💬</a>
       </div>
     </div>
@@ -404,6 +657,8 @@
       <ul>
         <li><a href="#nosotros">Quiénes somos</a></li>
         <li><a href="#politicas">Políticas</a></li>
+        <li><a href="#testimoniales">Testimonios</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#contacto">Contacto</a></li>
         <li><a href="https://wa.me/529983196749">WhatsApp</a></li>
       </ul>
@@ -418,219 +673,47 @@
 <script>
 /* ════════════════════════════════════════
    ANIMATED HERO CANVAS — CDFD BRAND
-   Dibuja: barbells, dumbbells, figuras corriendo,
-   hexágonos, partículas de energía y conexiones
-   en paleta azul marino + naranja CDFD
 ════════════════════════════════════════ */
 (function(){
   const canvas = document.getElementById('hero-canvas');
   const ctx    = canvas.getContext('2d');
   let W, H;
-
-  function resize(){
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  }
+  function resize(){ W=canvas.width=canvas.offsetWidth; H=canvas.height=canvas.offsetHeight; }
   resize();
-  window.addEventListener('resize', resize);
-
-  const C = { blue:'#1e88e5', blue2:'#1565c0', orange:'#ff6d00', orange2:'#e65100', teal:'#00838f', white:'rgba(245,247,250,0.9)' };
-
-  /* —— Particles (energy dots) —— */
-  const parts = Array.from({length:60},()=>({
-    x:Math.random(), y:Math.random(),
-    r:1+Math.random()*2.5,
-    vx:(Math.random()-.5)*.00028,
-    vy:(Math.random()-.5)*.00028,
-    col:Math.random()<.55?C.orange:C.blue,
-    a:.25+Math.random()*.5
-  }));
-
-  /* —— Hexagon nodes —— */
-  const hexes = Array.from({length:10},()=>({
-    x:Math.random(), y:Math.random(),
-    r:16+Math.random()*32,
-    vx:(Math.random()-.5)*.00014,
-    vy:(Math.random()-.5)*.00014,
-    phase:Math.random()*Math.PI*2,
-    col:Math.random()<.5?C.blue:C.teal,
-    a:.035+Math.random()*.055
-  }));
-
-  /* —— Barbells —— */
-  const bars = Array.from({length:6},()=>({
-    x:Math.random(), y:Math.random(),
-    ang:Math.random()*Math.PI,
-    va:(Math.random()-.5)*.0025,
-    vx:(Math.random()-.5)*.00018,
-    vy:(Math.random()-.5)*.00018,
-    sc:.5+Math.random()*.7,
-    a:.055+Math.random()*.085
-  }));
-
-  /* —— Dumbbells —— */
-  const dumbs = Array.from({length:7},()=>({
-    x:Math.random(), y:Math.random(),
-    ang:Math.random()*Math.PI,
-    va:(Math.random()-.5)*.0035,
-    vx:(Math.random()-.5)*.00022,
-    vy:(Math.random()-.5)*.00022,
-    sc:.38+Math.random()*.48,
-    a:.045+Math.random()*.075
-  }));
-
-  /* —— Lightning bolts —— */
-  const bolts = Array.from({length:5},()=>({
-    x:Math.random(), y:Math.random(),
-    vx:(Math.random()-.5)*.00018,
-    vy:(Math.random()-.5)*.00018,
-    ang:Math.random()*Math.PI*2,
-    va:(Math.random()-.5)*.004,
-    sc:.35+Math.random()*.55,
-    a:.04+Math.random()*.065
-  }));
-
-  /* —— Running figures —— */
-  const runners = [
-    {x:.75, y:.28, vx:.00022, ph:0,   sc:.85, a:.1 },
-    {x:.55, y:.62, vx:.00016, ph:1.2, sc:.65, a:.08},
-    {x:.88, y:.55, vx:.00019, ph:2.4, sc:.75, a:.09}
-  ];
-
-  /* —— Draw helpers —— */
-  function hex(cx,cy,r,col,a){
-    ctx.save(); ctx.globalAlpha=a; ctx.strokeStyle=col; ctx.lineWidth=1;
-    ctx.beginPath();
-    for(let i=0;i<6;i++){const ag=(Math.PI/3)*i-Math.PI/6; i?ctx.lineTo(cx+r*Math.cos(ag),cy+r*Math.sin(ag)):ctx.moveTo(cx+r*Math.cos(ag),cy+r*Math.sin(ag));}
-    ctx.closePath(); ctx.stroke(); ctx.restore();
-  }
-
-  function barbell(cx,cy,sc,a){
-    const L=82*sc,bar=8*sc,plt=15*sc,pw=9*sc;
-    ctx.save(); ctx.globalAlpha=a; ctx.lineCap='round';
-    ctx.strokeStyle=C.blue; ctx.lineWidth=bar;
-    ctx.beginPath(); ctx.moveTo(cx-L*.5,cy); ctx.lineTo(cx+L*.5,cy); ctx.stroke();
-    [[-L*.5-pw,-L*.5-pw*2],[L*.5+pw,L*.5+pw*2]].forEach(([a1,b1])=>{
-      ctx.strokeStyle=C.orange; ctx.lineWidth=plt*1.8;
-      ctx.beginPath(); ctx.moveTo(cx+a1,cy); ctx.lineTo(cx+b1,cy); ctx.stroke();
-    });
-    ctx.restore();
-  }
-
-  function dumbbell(cx,cy,sc,a){
-    const L=38*sc,bar=7*sc,plt=13*sc;
-    ctx.save(); ctx.globalAlpha=a; ctx.lineCap='round';
-    ctx.strokeStyle=C.blue2; ctx.lineWidth=bar;
-    ctx.beginPath(); ctx.moveTo(cx-L*.5,cy); ctx.lineTo(cx+L*.5,cy); ctx.stroke();
-    [-L*.5,L*.5].forEach(x=>{
-      ctx.strokeStyle=C.orange2; ctx.lineWidth=plt*1.6;
-      ctx.beginPath(); ctx.moveTo(cx+x-7*sc,cy); ctx.lineTo(cx+x+7*sc,cy); ctx.stroke();
-    });
-    ctx.restore();
-  }
-
-  function bolt(cx,cy,sc,a){
-    const s=sc*20;
-    ctx.save(); ctx.globalAlpha=a; ctx.fillStyle=C.orange;
-    ctx.beginPath();
-    ctx.moveTo(cx+s*.3,cy-s); ctx.lineTo(cx-s*.15,cy-s*.05);
-    ctx.lineTo(cx+s*.22,cy-s*.05); ctx.lineTo(cx-s*.3,cy+s);
-    ctx.lineTo(cx+s*.15,cy+s*.05); ctx.lineTo(cx-s*.22,cy+s*.05);
-    ctx.closePath(); ctx.fill(); ctx.restore();
-  }
-
-  function runner(cx,cy,ph,sc,a){
-    const s=sc*28;
-    ctx.save(); ctx.globalAlpha=a; ctx.strokeStyle=C.orange;
-    ctx.lineWidth=2.2*sc; ctx.lineCap='round'; ctx.lineJoin='round';
-    /* head */ ctx.beginPath(); ctx.arc(cx,cy-s*1.6,s*.26,0,Math.PI*2); ctx.stroke();
-    /* torso */ ctx.beginPath(); ctx.moveTo(cx,cy-s*1.32); ctx.lineTo(cx+Math.sin(ph)*.1*s,cy-s*.38); ctx.stroke();
-    const ar=Math.sin(ph)*.65, lr=Math.sin(ph)*.82;
-    /* arm L */ ctx.beginPath(); ctx.moveTo(cx,cy-s*1.1); ctx.lineTo(cx-Math.cos(ar)*s*.68,cy-s*.7+Math.sin(ar)*s*.28); ctx.stroke();
-    /* arm R */ ctx.beginPath(); ctx.moveTo(cx,cy-s*1.1); ctx.lineTo(cx+Math.cos(ar)*s*.68,cy-s*.7-Math.sin(ar)*s*.28); ctx.stroke();
-    /* leg L */ ctx.beginPath(); ctx.moveTo(cx,cy-s*.38); ctx.lineTo(cx+Math.sin(lr)*s*.58,cy+s*.38); ctx.lineTo(cx+Math.sin(lr)*s*.58+Math.cos(lr)*s*.48,cy+s); ctx.stroke();
-    /* leg R */ ctx.beginPath(); ctx.moveTo(cx,cy-s*.38); ctx.lineTo(cx-Math.sin(lr)*s*.58,cy+s*.38); ctx.lineTo(cx-Math.sin(lr)*s*.58-Math.cos(lr)*s*.48,cy+s); ctx.stroke();
-    ctx.restore();
-  }
-
-  function connections(){
-    const D=Math.min(W,H)*.19;
-    for(let i=0;i<parts.length;i++) for(let j=i+1;j<parts.length;j++){
-      const dx=(parts[i].x-parts[j].x)*W, dy=(parts[i].y-parts[j].y)*H, d=Math.hypot(dx,dy);
-      if(d<D){ ctx.save(); ctx.globalAlpha=(1-d/D)*.11; ctx.strokeStyle=C.blue; ctx.lineWidth=.5; ctx.beginPath(); ctx.moveTo(parts[i].x*W,parts[i].y*H); ctx.lineTo(parts[j].x*W,parts[j].y*H); ctx.stroke(); ctx.restore(); }
-    }
-  }
-
+  window.addEventListener('resize',resize);
+  const C={blue:'#1e88e5',blue2:'#1565c0',orange:'#ff6d00',orange2:'#e65100',teal:'#00838f',white:'rgba(245,247,250,0.9)'};
+  const parts=Array.from({length:60},()=>({x:Math.random(),y:Math.random(),r:1+Math.random()*2.5,vx:(Math.random()-.5)*.00028,vy:(Math.random()-.5)*.00028,col:Math.random()<.55?C.orange:C.blue,a:.25+Math.random()*.5}));
+  const hexes=Array.from({length:10},()=>({x:Math.random(),y:Math.random(),r:16+Math.random()*32,vx:(Math.random()-.5)*.00014,vy:(Math.random()-.5)*.00014,phase:Math.random()*Math.PI*2,col:Math.random()<.5?C.blue:C.teal,a:.035+Math.random()*.055}));
+  const bars=Array.from({length:6},()=>({x:Math.random(),y:Math.random(),ang:Math.random()*Math.PI,va:(Math.random()-.5)*.0025,vx:(Math.random()-.5)*.00018,vy:(Math.random()-.5)*.00018,sc:.5+Math.random()*.7,a:.055+Math.random()*.085}));
+  const dumbs=Array.from({length:7},()=>({x:Math.random(),y:Math.random(),ang:Math.random()*Math.PI,va:(Math.random()-.5)*.0035,vx:(Math.random()-.5)*.00022,vy:(Math.random()-.5)*.00022,sc:.38+Math.random()*.48,a:.045+Math.random()*.075}));
+  const bolts=Array.from({length:5},()=>({x:Math.random(),y:Math.random(),vx:(Math.random()-.5)*.00018,vy:(Math.random()-.5)*.00018,ang:Math.random()*Math.PI*2,va:(Math.random()-.5)*.004,sc:.35+Math.random()*.55,a:.04+Math.random()*.065}));
+  const runners=[{x:.75,y:.28,vx:.00022,ph:0,sc:.85,a:.1},{x:.55,y:.62,vx:.00016,ph:1.2,sc:.65,a:.08},{x:.88,y:.55,vx:.00019,ph:2.4,sc:.75,a:.09}];
+  function hex(cx,cy,r,col,a){ctx.save();ctx.globalAlpha=a;ctx.strokeStyle=col;ctx.lineWidth=1;ctx.beginPath();for(let i=0;i<6;i++){const ag=(Math.PI/3)*i-Math.PI/6;i?ctx.lineTo(cx+r*Math.cos(ag),cy+r*Math.sin(ag)):ctx.moveTo(cx+r*Math.cos(ag),cy+r*Math.sin(ag));}ctx.closePath();ctx.stroke();ctx.restore();}
+  function barbell(cx,cy,sc,a){const L=82*sc,bar=8*sc,plt=15*sc,pw=9*sc;ctx.save();ctx.globalAlpha=a;ctx.lineCap='round';ctx.strokeStyle=C.blue;ctx.lineWidth=bar;ctx.beginPath();ctx.moveTo(cx-L*.5,cy);ctx.lineTo(cx+L*.5,cy);ctx.stroke();[[-L*.5-pw,-L*.5-pw*2],[L*.5+pw,L*.5+pw*2]].forEach(([a1,b1])=>{ctx.strokeStyle=C.orange;ctx.lineWidth=plt*1.8;ctx.beginPath();ctx.moveTo(cx+a1,cy);ctx.lineTo(cx+b1,cy);ctx.stroke();});ctx.restore();}
+  function dumbbell(cx,cy,sc,a){const L=38*sc,bar=7*sc,plt=13*sc;ctx.save();ctx.globalAlpha=a;ctx.lineCap='round';ctx.strokeStyle=C.blue2;ctx.lineWidth=bar;ctx.beginPath();ctx.moveTo(cx-L*.5,cy);ctx.lineTo(cx+L*.5,cy);ctx.stroke();[-L*.5,L*.5].forEach(x=>{ctx.strokeStyle=C.orange2;ctx.lineWidth=plt*1.6;ctx.beginPath();ctx.moveTo(cx+x-7*sc,cy);ctx.lineTo(cx+x+7*sc,cy);ctx.stroke();});ctx.restore();}
+  function bolt(cx,cy,sc,a){const s=sc*20;ctx.save();ctx.globalAlpha=a;ctx.fillStyle=C.orange;ctx.beginPath();ctx.moveTo(cx+s*.3,cy-s);ctx.lineTo(cx-s*.15,cy-s*.05);ctx.lineTo(cx+s*.22,cy-s*.05);ctx.lineTo(cx-s*.3,cy+s);ctx.lineTo(cx+s*.15,cy+s*.05);ctx.lineTo(cx-s*.22,cy+s*.05);ctx.closePath();ctx.fill();ctx.restore();}
+  function runner(cx,cy,ph,sc,a){const s=sc*28;ctx.save();ctx.globalAlpha=a;ctx.strokeStyle=C.orange;ctx.lineWidth=2.2*sc;ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();ctx.arc(cx,cy-s*1.6,s*.26,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.moveTo(cx,cy-s*1.32);ctx.lineTo(cx+Math.sin(ph)*.1*s,cy-s*.38);ctx.stroke();const ar=Math.sin(ph)*.65,lr=Math.sin(ph)*.82;ctx.beginPath();ctx.moveTo(cx,cy-s*1.1);ctx.lineTo(cx-Math.cos(ar)*s*.68,cy-s*.7+Math.sin(ar)*s*.28);ctx.stroke();ctx.beginPath();ctx.moveTo(cx,cy-s*1.1);ctx.lineTo(cx+Math.cos(ar)*s*.68,cy-s*.7-Math.sin(ar)*s*.28);ctx.stroke();ctx.beginPath();ctx.moveTo(cx,cy-s*.38);ctx.lineTo(cx+Math.sin(lr)*s*.58,cy+s*.38);ctx.lineTo(cx+Math.sin(lr)*s*.58+Math.cos(lr)*s*.48,cy+s);ctx.stroke();ctx.beginPath();ctx.moveTo(cx,cy-s*.38);ctx.lineTo(cx-Math.sin(lr)*s*.58,cy+s*.38);ctx.lineTo(cx-Math.sin(lr)*s*.58-Math.cos(lr)*s*.48,cy+s);ctx.stroke();ctx.restore();}
+  function connections(){const D=Math.min(W,H)*.19;for(let i=0;i<parts.length;i++)for(let j=i+1;j<parts.length;j++){const dx=(parts[i].x-parts[j].x)*W,dy=(parts[i].y-parts[j].y)*H,d=Math.hypot(dx,dy);if(d<D){ctx.save();ctx.globalAlpha=(1-d/D)*.11;ctx.strokeStyle=C.blue;ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(parts[i].x*W,parts[i].y*H);ctx.lineTo(parts[j].x*W,parts[j].y*H);ctx.stroke();ctx.restore();}}}
   let t=0;
-
   function loop(){
     ctx.clearRect(0,0,W,H);
-
-    /* Ambient glow */
     const grd=ctx.createRadialGradient(W*.65,H*.4,0,W*.65,H*.4,W*.72);
-    grd.addColorStop(0,'rgba(21,101,192,.1)');
-    grd.addColorStop(.45,'rgba(230,81,0,.055)');
-    grd.addColorStop(1,'rgba(6,15,30,0)');
-    ctx.fillStyle=grd; ctx.fillRect(0,0,W,H);
-
+    grd.addColorStop(0,'rgba(21,101,192,.1)');grd.addColorStop(.45,'rgba(230,81,0,.055)');grd.addColorStop(1,'rgba(6,15,30,0)');
+    ctx.fillStyle=grd;ctx.fillRect(0,0,W,H);
     t+=.011;
-
-    /* Hexes */
-    hexes.forEach(h=>{
-      h.x+=h.vx; h.y+=h.vy;
-      if(h.x<-.06)h.x=1.06; if(h.x>1.06)h.x=-.06;
-      if(h.y<-.06)h.y=1.06; if(h.y>1.06)h.y=-.06;
-      hex(h.x*W,h.y*H,h.r*(.88+.12*Math.sin(t+h.phase)),h.col,h.a*(.8+.2*Math.sin(t+h.phase)));
-    });
-
+    hexes.forEach(h=>{h.x+=h.vx;h.y+=h.vy;if(h.x<-.06)h.x=1.06;if(h.x>1.06)h.x=-.06;if(h.y<-.06)h.y=1.06;if(h.y>1.06)h.y=-.06;hex(h.x*W,h.y*H,h.r*(.88+.12*Math.sin(t+h.phase)),h.col,h.a*(.8+.2*Math.sin(t+h.phase)));});
     connections();
-
-    /* Particles */
-    parts.forEach(p=>{
-      p.x+=p.vx; p.y+=p.vy;
-      if(p.x<0)p.x=1; if(p.x>1)p.x=0;
-      if(p.y<0)p.y=1; if(p.y>1)p.y=0;
-      ctx.save(); ctx.globalAlpha=p.a*(.65+.35*Math.sin(t*1.6+p.x*9));
-      ctx.fillStyle=p.col; ctx.beginPath(); ctx.arc(p.x*W,p.y*H,p.r,0,Math.PI*2); ctx.fill(); ctx.restore();
-    });
-
-    /* Barbells */
-    bars.forEach(b=>{
-      b.x+=b.vx; b.y+=b.vy; b.ang+=b.va;
-      if(b.x<-.06)b.x=1.06; if(b.x>1.06)b.x=-.06;
-      if(b.y<-.06)b.y=1.06; if(b.y>1.06)b.y=-.06;
-      ctx.save(); ctx.translate(b.x*W,b.y*H); ctx.rotate(b.ang); barbell(0,0,b.sc,b.a); ctx.restore();
-    });
-
-    /* Dumbbells */
-    dumbs.forEach(d=>{
-      d.x+=d.vx; d.y+=d.vy; d.ang+=d.va;
-      if(d.x<-.06)d.x=1.06; if(d.x>1.06)d.x=-.06;
-      if(d.y<-.06)d.y=1.06; if(d.y>1.06)d.y=-.06;
-      ctx.save(); ctx.translate(d.x*W,d.y*H); ctx.rotate(d.ang); dumbbell(0,0,d.sc,d.a); ctx.restore();
-    });
-
-    /* Bolts */
-    bolts.forEach(b=>{
-      b.x+=b.vx; b.y+=b.vy; b.ang+=b.va;
-      if(b.x<-.06)b.x=1.06; if(b.x>1.06)b.x=-.06;
-      if(b.y<-.06)b.y=1.06; if(b.y>1.06)b.y=-.06;
-      ctx.save(); ctx.translate(b.x*W,b.y*H); ctx.rotate(b.ang); bolt(0,0,b.sc,b.a); ctx.restore();
-    });
-
-    /* Runners */
-    runners.forEach(r=>{
-      r.x+=r.vx; r.ph+=.038;
-      if(r.x>1.12)r.x=-.08;
-      runner(r.x*W,r.y*H,r.ph,r.sc,r.a);
-    });
-
+    parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=1;if(p.x>1)p.x=0;if(p.y<0)p.y=1;if(p.y>1)p.y=0;ctx.save();ctx.globalAlpha=p.a*(.65+.35*Math.sin(t*1.6+p.x*9));ctx.fillStyle=p.col;ctx.beginPath();ctx.arc(p.x*W,p.y*H,p.r,0,Math.PI*2);ctx.fill();ctx.restore();});
+    bars.forEach(b=>{b.x+=b.vx;b.y+=b.vy;b.ang+=b.va;if(b.x<-.06)b.x=1.06;if(b.x>1.06)b.x=-.06;if(b.y<-.06)b.y=1.06;if(b.y>1.06)b.y=-.06;ctx.save();ctx.translate(b.x*W,b.y*H);ctx.rotate(b.ang);barbell(0,0,b.sc,b.a);ctx.restore();});
+    dumbs.forEach(d=>{d.x+=d.vx;d.y+=d.vy;d.ang+=d.va;if(d.x<-.06)d.x=1.06;if(d.x>1.06)d.x=-.06;if(d.y<-.06)d.y=1.06;if(d.y>1.06)d.y=-.06;ctx.save();ctx.translate(d.x*W,d.y*H);ctx.rotate(d.ang);dumbbell(0,0,d.sc,d.a);ctx.restore();});
+    bolts.forEach(b=>{b.x+=b.vx;b.y+=b.vy;b.ang+=b.va;if(b.x<-.06)b.x=1.06;if(b.x>1.06)b.x=-.06;if(b.y<-.06)b.y=1.06;if(b.y>1.06)b.y=-.06;ctx.save();ctx.translate(b.x*W,b.y*H);ctx.rotate(b.ang);bolt(0,0,b.sc,b.a);ctx.restore();});
+    runners.forEach(r=>{r.x+=r.vx;r.ph+=.038;if(r.x>1.12)r.x=-.08;runner(r.x*W,r.y*H,r.ph,r.sc,r.a);});
     requestAnimationFrame(loop);
   }
   loop();
 })();
 
-/* Nav */
+/* Nav scroll */
 window.addEventListener('scroll',()=>{
   document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>60);
 });
@@ -650,6 +733,14 @@ function handleSubmit(e){
   const btn=e.target.querySelector('.form-submit');
   btn.textContent='Enviando…'; btn.disabled=true;
   setTimeout(()=>{ document.getElementById('form-success').style.display='block'; btn.textContent='✓ Enviado'; e.target.reset(); },1200);
+}
+
+/* Blog tabs */
+function showTab(idx, btn){
+  document.querySelectorAll('.blog-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.blog-article').forEach(a=>a.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('blog-art-'+idx).classList.add('active');
 }
 </script>
 </body>
